@@ -2,9 +2,6 @@
 //AMAZON //geeksforgeeks
 
 // Java program to get intersection point of two linked list
- 
-// Java program to get intersection point of two linked list
- 
 class LinkedList {
  
     static Node head1, head2;
