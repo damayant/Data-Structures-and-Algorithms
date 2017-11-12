@@ -1,93 +1,67 @@
-//Java program to find intersection of two LinkedLists
-//AMAZON //geeksforgeeks
+//simple java program to find the n'th node from end of linked list
+class LinkedList
+{
+	Node head ; //head of the list
 
-// Java program to get intersection point of two linked list
-class LinkedList {
- 
-    static Node head1, head2;
- 
-    static class Node {
- 
-        int data;
-        Node next;
- 
-        Node(int d) {
-            data = d;
-            next = null;
-        }
-    }
- 
-    /*function to get the intersection point of two linked
-    lists head1 and head2 */
-    int getNode() {
-        int c1 = getCount(head1);
-        int c2 = getCount(head2);
-        int d;
- 
-        if (c1 > c2) {
-            d = c1 - c2;
-            return _getIntesectionNode(d, head1, head2);
-        } else {
-            d = c2 - c1;
-            return _getIntesectionNode(d, head2, head1);
-        }
-    }
- 
-    /* function to get the intersection point of two linked
-     lists head1 and head2 where head1 has d more nodes than
-     head2 */
-    int _getIntesectionNode(int d, Node node1, Node node2) {
-        int i;
-        Node current1 = node1;
-        Node current2 = node2;
-        for (i = 0; i < d; i++) {
-            if (current1 == null) {
-                return -1;
-            }
-            current1 = current1.next;
-        }
-        while (current1 != null && current2 != null) {
-            if (current1.data == current2.data) {
-                return current1.data;
-            }
-            current1 = current1.next;
-            current2 = current2.next;
-        }
- 
-        return -1;
-    }
- 
-    /*Takes head pointer of the linked list and
-    returns the count of nodes in the list */
-    int getCount(Node node) {
-        Node current = node;
-        int count = 0;
- 
-        while (current != null) {
-            count++;
-            current = current.next;
-        }
- 
-        return count;
-    }
- 
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
- 
-        // creating first linked list
-        list.head1 = new Node(3);
-        list.head1.next = new Node(6);
-        list.head1.next.next = new Node(15);
-        list.head1.next.next.next = new Node(15);
-        list.head1.next.next.next.next = new Node(30);
- 
-        // creating second linked list
-        list.head2 = new Node(10);
-        list.head2.next = new Node(15);
-        list.head2.next.next = new Node(30);
- 
-        System.out.println("The node of intersection is " + list.getNode());
- 
-    }
+	/*Linked List node */
+	class Node
+	{
+		int data;
+		Node next;
+		Node(int d)
+		{
+			data = d;
+			next = null;
+		}
+	}
+
+	/*function to get the n'th node from end */
+	void printNthFromLast(int n)
+	{
+		int len = 0;
+		Node temp = head ;
+
+		//1.count the number of nodes in the linked list
+		while(temp!=null)
+		{
+			temp = temp.next;
+			len++ ;
+		}
+
+		//check if value of n is not more 
+		//than the length of the linked list
+		if(len<n)
+			return ;
+		temp = head;
+
+		//2.get the (n-len+1)th node from the beginning
+		for(int i=1;i<len-n+1;i++)
+			temp =temp.next;
+		System.out.println(temp.data);
+	}
+
+	/* inserts a new Node at the fromt of the list*/
+	public void push(int new_data)
+	{
+		//allocate the node and put in the data
+		Node new_node = new Node(new_data);
+		//make next of the new node as head
+		new_node.next = head ;
+		//move the head to point to the new node
+		head = new_node ;
+	}
+
+	/*drier progarm to test above methods*/
+	public static void main(String[] args)
+	{
+		LinkedList llist =new LinkedList;
+		llist.push(20);
+		llist.push(4);
+		llist.push(15);
+		llist.push(35);
+
+		llist.printNthFromLast(4);
+	}
+
+
 }
- 
