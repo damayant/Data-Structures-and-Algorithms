@@ -21,5 +21,9 @@ public class BinaryTree {
 
         bstTraversal tree_traversal = new bstTraversal();
         tree_traversal.inorder(tree.root);
+        System.out.println("");
+        tree_traversal.preorder(tree.root);
+        System.out.println("");
+        tree_traversal.postorder(tree.root);
     }
 }
