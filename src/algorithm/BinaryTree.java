@@ -19,7 +19,7 @@ public class BinaryTree {
         tree.root.right.left = new Node(6);
         tree.root.right.right = new Node(8);
 
-
+/*
         bstTraversal tree_traversal = new bstTraversal();
         tree_traversal.inorder(tree.root);
         System.out.println("");
@@ -30,5 +30,10 @@ public class BinaryTree {
 
         isBstBalanced checkbstbalance = new isBstBalanced();
         System.out.println(checkbstbalance.checkBSTBalance(tree.root));
+
+        */
+
+        findClosestValue closestValue = new findClosestValue(tree.root,2);
+        System.out.println(closestValue.answer);
     }
 }
