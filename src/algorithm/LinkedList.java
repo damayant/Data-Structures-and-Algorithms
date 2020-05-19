@@ -13,9 +13,17 @@ public class LinkedList {
         head.next.next.next =  new ListNode(4);
         head.next.next.next.next =  new ListNode(5);
         head.next.next.next.next.next =  new ListNode(6);
+        head.next.next.next.next.next.next =  new ListNode(7);
 
-        removeKthNode remove = new removeKthNode();
-        ListNode result = remove.removeKthNode(head,4);
+//        removeKthNode remove = new removeKthNode();
+//        ListNode result = remove.removeKthNode(head,4);
+
+        reverseLinkedList reversal = new reverseLinkedList();
+        ListNode result = reversal.reverseR(head);
+//        ListNode result = reversal.reverseI(head);
+
+
+
 
         while(result!=null)
         {
