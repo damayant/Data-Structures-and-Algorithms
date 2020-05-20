@@ -18,17 +18,23 @@ public class LinkedList {
 //        removeKthNode remove = new removeKthNode();
 //        ListNode result = remove.removeKthNode(head,4);
 
-        reverseLinkedList reversal = new reverseLinkedList();
-        ListNode result = reversal.reverseR(head);
+//        reverseLinkedList reversal = new reverseLinkedList();
+//        ListNode result = reversal.reverseR(head);
 //        ListNode result = reversal.reverseI(head);
 
+        linkedListFunctions functions = new linkedListFunctions();
+        int capacity = functions.countNodes(head);
+        System.out.println(capacity);
 
 
 
-        while(result!=null)
-        {
-            System.out.print(result.value);
-            result = result.next ;
-        }
+//        while(result!=null)
+//        {
+//            System.out.print(result.value);
+//            result = result.next ;
+//        }
+
     }
+
+
 }

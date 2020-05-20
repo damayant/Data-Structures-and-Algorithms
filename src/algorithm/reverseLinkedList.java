@@ -9,14 +9,15 @@ public class reverseLinkedList {
     /*recursive version */
     public ListNode reverseR(ListNode head) {
 
-        if(head!=null || head.next!=null)
+        if(head ==null || head.next ==null)
         {
             return head;
         }
-                ListNode p = reverseR(head.next);
-                head.next.next = head ;
-                head.next = null;
-                return p;
+
+        ListNode p = reverseR(head.next);
+        head.next.next = head ;
+        head.next = null;
+        return p;
     }
 
     /*iterative version*/
