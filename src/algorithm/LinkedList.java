@@ -14,6 +14,8 @@ public class LinkedList {
         head.next.next.next.next =  new ListNode(5);
         head.next.next.next.next.next =  new ListNode(6);
         head.next.next.next.next.next.next =  new ListNode(7);
+        head.next.next.next.next.next.next.next =  head;
+
 
 //        removeKthNode remove = new removeKthNode();
 //        ListNode result = remove.removeKthNode(head,4);
@@ -23,8 +25,11 @@ public class LinkedList {
 //        ListNode result = reversal.reverseI(head);
 
         linkedListFunctions functions = new linkedListFunctions();
-        int capacity = functions.countNodes(head);
-        System.out.println(capacity);
+//        int capacity = functions.countNodes(head);
+        boolean result = functions.checkLoop(head);
+        System.out.println(result);
+
+
 
 
 
