@@ -14,4 +14,5 @@
 2.  Height calculation
 3.  Check if BST is balanced
 4.  Find the closest value 
+5.  Check if two BSTs are same
 ```
