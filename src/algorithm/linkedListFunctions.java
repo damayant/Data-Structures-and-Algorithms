@@ -40,4 +40,28 @@ public class linkedListFunctions {
         }
         return false;
     }
+
+    public ListNode mergeLL(ListNode l1, ListNode l2)
+    {
+        ListNode l3 = new ListNode(0);
+        ListNode p =l3 ;
+
+        while(l1!=null && l2!=null)
+        {
+            if(l1.value<l2.value)
+            {
+                p.next = l1;
+                l1 = l1.next;
+            }
+            else
+            {
+                p.next = l2;
+                l2 = l2.next;
+            }
+            p = p.next ;
+        }
+        if(l1 == null) p.next = l2 ;
+        if(l2 == null) p.next = l1;
+        return l3.next ;
+    }
 }
