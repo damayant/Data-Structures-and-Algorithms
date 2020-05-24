@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.util.List;
+
 public class BinaryTree {
     Node root;
 
@@ -31,9 +33,19 @@ public class BinaryTree {
         isBstBalanced checkbstbalance = new isBstBalanced();
         System.out.println(checkbstbalance.checkBSTBalance(tree.root));
 
-        */
+
 
         findClosestValue closestValue = new findClosestValue(tree.root,2);
         System.out.println(closestValue.answer);
+
+ */
+
+        sumBranches findSum = new sumBranches();
+        List<Integer>  result = findSum.sumOfAllBranch(tree.root);
+
+        for(int i=0;i<result.size();i++)
+        {
+            System.out.println(result.get(i));
+        }
     }
 }
