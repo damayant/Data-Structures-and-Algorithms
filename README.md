@@ -26,7 +26,7 @@
 1. Check palindromic strings
 2. Check 
     a.  if two strings are anagrams
-    b.  group anagrams in a list
+    b.  group anagrams in a list (source : https://www.youtube.com/watch?v=sGyGLIx69Og)
 ```
 
 * Array
