@@ -21,3 +21,15 @@
 ```
 1. Highest sum of contiguous subset
 ```
+* Strings
+```
+1. Check palindromic strings
+2. Check 
+    a.  if two strings are anagrams
+    b.  group anagrams in a list
+```
+
+* Array
+```
+1. Find two numbers in the list which sum up to a given sum
+```
