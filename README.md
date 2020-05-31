@@ -32,4 +32,5 @@
 * Array
 ```
 1. Find two numbers in the list which sum up to a given sum
+2. Find the smallest difference between two numbers each belonging from two different arrays
 ```
