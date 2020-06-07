@@ -39,7 +39,7 @@ public class LinkedList {
 //            result = result.next ;
 //        }
 
-
+/*
         ListNode a = new ListNode(1);
         ListNode b = new ListNode(3);
         ListNode c = new ListNode(5);
@@ -64,8 +64,29 @@ public class LinkedList {
         System.out.print(result.value);
         result = result.next ;
         }
+*/
 
 
+        ListNode a = new ListNode(3);
+        ListNode b = new ListNode(0);
+        ListNode c = new ListNode(5);
+        ListNode d = new ListNode(2);
+        ListNode e = new ListNode(1);
+        ListNode f = new ListNode(4);
+
+        a.next = b;
+        b.next = c ;
+        c.next = d ;
+        d.next = e ;
+        e.next = f ;
+
+//        reArrange rearrange = new reArrange();
+//        ListNode result = rearrange.reArrangeKthNode(a,3);
+//
+//        while(result!=null)
+//        {
+//            System.out.println(result.value);
+//        }
     }
 
 
